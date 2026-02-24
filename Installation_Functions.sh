@@ -19,7 +19,7 @@ Software_Install() {
     else 
       echo -e "$Yellow Installing $args $Na"
       dnf install $args
-      echo "$Green Package $args Installed $Na"
+      echo -e "$Green Package $args Installed $Na"
     fi 
   done 
 }
@@ -30,7 +30,7 @@ if [ $# -eq 0 ]; then
 fi
 
 if [ $(id -u) -ne 0 ]; then
-  echo -e "$Blue User is not root Hence skipping the installtio $Na"
+  echo -e "$Blue User is not root Hence skipping the installtion $Na"
   exit 1
 else 
   Software_Install $@
