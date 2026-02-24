@@ -7,12 +7,12 @@ Blue='\e[34m'
 yellow='\e[33m'
 Na='\e[0m'
 if [ $# -eq 0 ]; then
-  echo "$Red Please pass the required packages/software to install as Arguments $Na"
+  echo -e "$Red Please pass the required packages/software to install as Arguments $Na"
   exit 1
 fi
 
 if [ $(id -u) -ne 0]; then
-  echo "$Blue User is not root Hence skipping the installtio $Na"
+  echo -e "$Blue User is not root Hence skipping the installtio $Na"
   exit 1
 else 
   Software_Install $@
