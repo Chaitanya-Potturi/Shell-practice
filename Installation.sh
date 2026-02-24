@@ -8,3 +8,4 @@ if UserId eq 0; then
   dnf install $1
 else 
   echo "User is $(whoami) User is not root, Hence skipping installation"
+fi
