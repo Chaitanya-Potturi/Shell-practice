@@ -24,4 +24,3 @@ fi
         dnf install $args -y 
       fi
   done
-fi
