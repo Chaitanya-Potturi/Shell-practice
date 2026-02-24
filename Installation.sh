@@ -14,7 +14,7 @@ else
     if [ $UserId -eq 0 ]; then
       echo "User is root, So proceed with the isntallation"
       echo " Installing $@"
-      dnf install $@ -y 
+      dnf install $args -y 
     else 
       echo "User is $(whoami) is not root user, Hence skipping installation"
     fi
