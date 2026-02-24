@@ -1,7 +1,7 @@
 #!/bin/bash
 
 UserId=$(id -u)
-#echo " User id form the id command $UserId"
+echo " User id form the id command $UserId"
 
 if [ $# -eq 0 ]; then
   echo " Please pass the required software to install"
