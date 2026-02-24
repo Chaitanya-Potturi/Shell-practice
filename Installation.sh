@@ -15,7 +15,7 @@ else
       echo "User is root, So proceed with the isntallation"
       echo " Installing $@"
       dnf install $@ -y 
-    elif 
+    else 
       echo "User is $(whoami) is not root user, Hence skipping installation"
     fi
 fi
