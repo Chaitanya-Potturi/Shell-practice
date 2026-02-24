@@ -14,7 +14,7 @@ else
     #   exit 1
     if [ $UserId -eq 0 ]; then
       echo "User is root, So proceeding with the isntallation"
-      software=$(dnf list installed $@)
+      software=$(dnf list installed $args)
       if [ $? -eq 0 ]; then
         echo "$args is already installed"  
       else
