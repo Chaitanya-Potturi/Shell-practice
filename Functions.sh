@@ -16,7 +16,8 @@ User_Check(){
 if [ $(id -u) -ne 0 ]; then
   echo -e "$Blue User is not root Hence skipping the installtion $Na"
   exit 1
-else 
+else
+  Args_Check $@
   Software_Install $@
 fi
 }
@@ -33,7 +34,7 @@ Software_Install() {
           echo -e "$Green Package is installed $Na"
       else 
         echo -e "$Green $args is already installed $Na "
-    
+      fi
   done 
 }
 
@@ -41,5 +42,5 @@ Software_Remove(){
  echo ""
 }
 User_Check
-Args_Check $@
+
 
