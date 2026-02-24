@@ -1,18 +1,18 @@
 #!/bin/bash
 
 #COLOURS
-Red=$(\e[31m)
-Green=$(\e[32m)
-Blue=$(\e[34m)
-yellow=$(\e[33m)
-Na=$(\e[om)
+Red=$('\e[31m')
+Green=$('\e[32m')
+Blue=$('\e[34m')
+yellow=$('\e[33m')
+Na=$('\e[om')
 if [ $# -eq 0 ]; then
-  echo "Please pass the required packages/software to install as Arguments"
+  echo "$Red Please pass the required packages/software to install as Arguments $Na"
   exit 1
 fi
 
 if [ $(id -u) -ne 0]; then
-  echo "User is not root Hence skipping the installtion"
+  echo "$Blue User is not root Hence skipping the installtio $Na"
   exit 1
 else 
   Software_Install $@
