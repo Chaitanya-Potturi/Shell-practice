@@ -7,6 +7,7 @@ Blue='\e[34m'
 yellow='\e[33m'
 Na='\e[0m'
 
+#Function
 Software_Install() {
 
 #Checking if its already installed or not
@@ -18,7 +19,7 @@ Software_Install() {
       echo -e "$Green The Package $args is already installed $Na "
     else 
       echo -e "$Yellow Installing $args $Na"
-      dnf install $args
+      dnf install $args -y 
       echo -e "$Green Package $args Installed $Na"
     fi 
   done 
