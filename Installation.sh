@@ -16,7 +16,7 @@ fi
     # elif [ $# -gt 1 ]; then
     #   echo " please pass only one software to install at one time"
     #   exit 1
-      software=$(rpm -q $args)
+      software=$(rpm -q "$args")
       if [ $? -eq 0 ]; then
         echo "$args is already installed"  
       else
