@@ -11,4 +11,4 @@ Software_Install() {
 Software_Remove(){
 
 }
-Software_Install $@
+Software_Install nginx
