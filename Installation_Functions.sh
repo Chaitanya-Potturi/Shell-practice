@@ -6,17 +6,6 @@ Green='\e[32m'
 Blue='\e[34m'
 yellow='\e[33m'
 Na='\e[0m'
-if [ $# -eq 0 ]; then
-  echo -e "$Red Please pass the required packages/software to install as Arguments $Na"
-  exit 1
-fi
-
-if [ $(id -u) -ne 0]; then
-  echo -e "$Blue User is not root Hence skipping the installtio $Na"
-  exit 1
-else 
-  Software_Install $@
-fi
 
 Software_Install() {
 
@@ -33,3 +22,17 @@ Software_Install() {
       echo "$Green Package $args Installed $Na"
   done 
 }
+
+if [ $# -eq 0 ]; then
+  echo -e "$Red Please pass the required packages/software to install as Arguments $Na"
+  exit 1
+fi
+
+if [ $(id -u) -ne 0 ]; then
+  echo -e "$Blue User is not root Hence skipping the installtio $Na"
+  exit 1
+else 
+  Software_Install $@
+fi
+
+
