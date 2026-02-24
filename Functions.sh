@@ -12,7 +12,7 @@ if [ $(id -u) -ne 0 ]; then
   echo -e "$Blue User is not root Hence skipping the installtion $Na"
   exit 1
 else
-  Args_Check $@
+  Args_Check 
   Software_Install $@
 fi
 }
