@@ -3,7 +3,7 @@
 UserId=$(id -u)
 echo " User id fomr the id command $UserId"
 
-if [ UserId -eq 0 ] ; then
+if [ $UserId -eq 0 ] ; then
   echo "User is root, So proceed with the isntallation"
   echo " Installing $1"
   dnf install $1
