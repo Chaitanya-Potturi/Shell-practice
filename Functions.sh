@@ -6,6 +6,12 @@ Blue='\e[34m'
 Yellow='\e[33m'
 Na='\e[0m'
 
+Args_Check(){
+if [ $# -eq 0 ]; then
+  echo -e "$Red Please pass the required packages/software to install as Arguments $Na"
+  exit 1
+fi
+}
 
 User_Check(){
 if [ $(id -u) -ne 0 ]; then
@@ -17,12 +23,7 @@ else
 fi
 }
 
-Args_Check(){
-if [ $# -eq 0 ]; then
-  echo -e "$Red Please pass the required packages/software to install as Arguments $Na"
-  exit 1
-fi
-}
+
 
 
 Software_Install() {
