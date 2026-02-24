@@ -7,7 +7,7 @@ if [ $# -eq 0 ]; then
   echo " Please pass the required software to install"
   exit 1
 fi
-if [ $UserId -eq 0 ]; then
+if [ $UserId -ne 0 ]; then
     echo "User is not root, So skipping the isntallation"
     exit 1
 else
