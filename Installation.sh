@@ -13,9 +13,13 @@ else
     #   echo " please pass only one software to install at one time"
     #   exit 1
     if [ $UserId -eq 0 ]; then
-      echo "User is root, So proceed with the isntallation"
-      echo " Installing $@"
-      dnf install $args -y 
+      echo "User is root, So proceeding with the isntallation"
+      software=$(dnf list installed $@)
+      if [ $? -eq 0 ]; then
+        echo "$args is already installed"  
+      else
+        echo " Installing $args as it was not installed"
+        dnf install $args -y 
     else 
       echo "User is $(whoami) is not root user, Hence skipping installation"
     fi
