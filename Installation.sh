@@ -3,7 +3,7 @@
 UserId=$(id -u)
 echo " User id form the id command $UserId"
 
-if [ -z $1 ]; then
+if [ -z $@ ]; then
   echo " Please pass the required software to install"
   exit 1
 else
