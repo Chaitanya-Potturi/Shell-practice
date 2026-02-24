@@ -11,7 +11,7 @@ else
     # elif [ $# -gt 1 ]; then
     #   echo " please pass only one software to install at one time"
     #   exit 1
-    if [ $UserId -eq 0 ] ; then
+    if [ $UserId -eq 0 ]; then
       echo "User is root, So proceed with the isntallation"
       echo " Installing $@"
       dnf install $@ -y 
