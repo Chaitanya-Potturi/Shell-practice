@@ -43,7 +43,18 @@ Software_Install() {
 }
 
 Software_Remove(){
- echo ""
+ for args in $@
+    do 
+      pkg=$(rpm -q $args )
+      if [ $? -eq 0 ]; then
+          echo -e "$Red Pacakage is not there $Na"
+          echo -e "$Blue Package $args is getting installed $Na"
+          dnf remove $args -y 
+          echo -e "$Green Package is installed $Na"
+      else 
+        echo -e "$Green $args is not installed $Na "
+      fi
+  done 
 }
 User_Check $@
 
