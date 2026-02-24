@@ -5,7 +5,7 @@ echo " User id form the id command $UserId"
 
 if [ -z $1 ]; then
   echo " Please pass the required software to install"
-fi
+  exit 1
 else
   for args in $@
     # elif [ $# -gt 1 ]; then
