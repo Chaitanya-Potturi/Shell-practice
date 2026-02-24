@@ -6,6 +6,21 @@ Blue='\e[34m'
 Yellow='\e[33m'
 Na='\e[0m'
 
+Args_Check(){
+if [ $# -eq 0 ]; then
+  echo -e "$Red Please pass the required packages/software to install as Arguments $Na"
+  exit 1
+fi
+}
+User_Check(){
+if [ $(id -u) -ne 0 ]; then
+  echo -e "$Blue User is not root Hence skipping the installtion $Na"
+  exit 1
+else 
+  Software_Install $@
+fi
+}
+
 Software_Install() {
 
   for args in $@
@@ -25,4 +40,6 @@ Software_Install() {
 Software_Remove(){
  echo ""
 }
-Software_Install $@
+User_Check
+Args_Check $@
+
