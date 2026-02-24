@@ -45,6 +45,6 @@ Software_Install() {
 Software_Remove(){
  echo ""
 }
-User_Check
+User_Check $@
 
 
