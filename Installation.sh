@@ -1,7 +1,7 @@
 #!/bin/bash
 
 UserId=$(id -u)
-echo " User id fomr the id command $UserId"
+echo " User id form the id command $UserId"
 
 if [ -z $1 ]; then
   echo " Please pass the required software to install"
@@ -13,5 +13,5 @@ elif [ $UserId -eq 0 ] ; then
   echo " Installing $1"
   dnf install $1 -y 
 else 
-  echo "User is $(whoami) User is not root, Hence skipping installation"
+  echo "User is $(whoami) is not root user, Hence skipping installation"
 fi
