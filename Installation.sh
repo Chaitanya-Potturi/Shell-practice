@@ -10,7 +10,7 @@ fi
 if [ $UserId -eq 0 ]; then
     echo "User is not root, So skipping the isntallation"
     exit 1
-elif 
+else
   for args in $@
     do
       # elif [ $# -gt 1 ]; then
