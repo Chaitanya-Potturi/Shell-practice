@@ -23,5 +23,5 @@ elif
           echo " Installing $args as it was not installed"
           dnf install $args -y 
         fi
-  done
+    done
 fi
