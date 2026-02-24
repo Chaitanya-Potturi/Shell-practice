@@ -8,6 +8,7 @@ if [ -z $1 ]; then
   exit 1
 else
   for args in $@
+  do
     # elif [ $# -gt 1 ]; then
     #   echo " please pass only one software to install at one time"
     #   exit 1
@@ -18,4 +19,5 @@ else
     else 
       echo "User is $(whoami) is not root user, Hence skipping installation"
     fi
+  done
 fi
