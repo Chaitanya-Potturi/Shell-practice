@@ -4,7 +4,7 @@
 Red='\e[31m'
 Green='\e[32m'
 Blue='\e[34m'
-yellow='\e[33m'
+Yellow='\e[33m'
 Na='\e[0m'
 
 #Function
