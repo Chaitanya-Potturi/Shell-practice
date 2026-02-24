@@ -23,8 +23,5 @@ fi
         echo " Installing $args as it was not installed"
         dnf install $args -y 
       fi
-    else 
-      echo "User is $(whoami) and not root user, Hence skipping installation"
-    fi
   done
 fi
