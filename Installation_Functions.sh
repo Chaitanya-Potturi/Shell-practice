@@ -13,13 +13,14 @@ Software_Install() {
 
   for args in $@
   do
-    pkg=$(rpm -q $@)
+    pkg=$(rpm -q $args)
     if [ $? -eq 0 ]; then
       echo -e "$Green The Package $args is already installed $Na "
     else 
       echo -e "$Yellow Installing $args $Na"
       dnf install $args
       echo "$Green Package $args Installed $Na"
+    fi 
   done 
 }
 
